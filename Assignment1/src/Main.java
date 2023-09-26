@@ -6,7 +6,6 @@
 * nor have I presented someone else's work as my own.
 * */
 
-
 public class Main {
     public static void main(String[] args) {
         //Hardcoded customer information
@@ -33,7 +32,7 @@ public class Main {
 
         print(CUSTOMER_NAME, productCode, productName, productDescription, amountPurchased, productPrice, subTotal, tax, total);
     }
-    
+
     public static void print(String CUSTOMER_NAME, int [] productCode, String [] productName, String[] productDescription, int []amountPurchased, double []productPrice, double subTotal, double tax, double total){
     //This function handles printing out and formatting the final receipt
         System.out.println("Welcome to Java Store");
@@ -48,7 +47,6 @@ public class Main {
         System.out.printf("\n%102s%10.2f", "Subtotal: ", subTotal);
         System.out.printf("\n%97s%15.2f", "Tax: ", tax);
         System.out.printf("\n%99s%13.2f","Total: ", total);
-
     }
 
 }
