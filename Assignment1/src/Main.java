@@ -13,13 +13,37 @@ public class Main {
 
         //Initializing and setting product values in parallel arrays
         int[] productCode = new int[]{1001, 1002, 1003, 1004};
+        //Validating supplied values
+        int prodCodeSize = productCode.length;
+        for(int i = 0; i< prodCodeSize; i++){
+            if(productCode[i] <0){
+                System.out.println("Item code invalid. Please try again with valid codes.");
+                return;
+            }
+        }
         String[] productName = {"Eggs", "Pancakes", "Bacon", "Milk"};
         String[] productDescription = {"1 Dozen Grade A Large", "12 Oz Pancake Batter Mix", "1 Lb Smoked Bacon", "1 Gallon 2% Milk"};
+
         double[] productPrice = {2.99, 5.99, 4.99, 2.39};
+        //Validating supplied values
+        int priceSize = productPrice.length;
+        for(int i = 0; i< priceSize; i++){
+            if(productPrice[i] <0){
+                System.out.println("Item Price invalid. Please try again with valid codes.");
+                return;
+            }
+        }
 
         //Hardcoded amount of each item customer purchased
         int[] amountPurchased = new int[]{2,1,4,2};
-
+        //Validating supplied values
+        int amountSize = amountPurchased.length;
+        for(int i = 0; i< amountSize; i++){
+            if(amountPurchased[i] <0){
+                System.out.println("Amount purchased invalid. Please try again with valid codes.");
+                return;
+            }
+        }
         //Calculate subtotal and tax
         double[] purchasedPrice = new double[4];
         double subTotal = 0;
