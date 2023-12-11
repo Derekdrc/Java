@@ -1,0 +1,25 @@
+1001
+Eggs
+1 Dozen Grade A Large
+2.99
+src//images//eggs.jpg
+1002
+Pancakes
+12 Oz Pancake Batter Mix
+5.99
+src//images//pancake.jpg
+1003
+Bacon
+1 Lb Smoked Bacon
+4.99
+src//images//bacon.jpg
+1004
+Milk
+1 Gallon 2% Milk
+2.39
+src//images//milk.jpg
+1005
+Charger
+USB C Cord and Plug
+12.99
+src//images//charger.jpg
