@@ -130,6 +130,14 @@ public class MarketCMDLine {
 
         //Close scanner object
         rd.close();
+        for(int i = 0; i<customerList.size(); i++){
+            if(custCode == customerList.get(i).getId()){
+                customerList.get(i).setPrevTotal(total);
+                String tempDate = new SimpleDateFormat("MM/dd/yyyy").format((Calendar.getInstance().getTime()));
+                customerList.get(i).setPrevDate(tempDate);
+            }
+        }
+        saveCustomerList();
     }
 
     //Load customers from file
@@ -182,6 +190,27 @@ public class MarketCMDLine {
         br.close();
     }
 
+    //Save customer list
+    void saveCustomerList() throws IOException{
+        FileWriter customer_file = new FileWriter("src//Files//Customers.txt", false);
+        BufferedWriter bw = new BufferedWriter(customer_file);
+
+        for(int i = 0; i < customerList.size(); i++){
+            bw.write(Integer.toString(customerList.get(i).getId()));
+            bw.newLine();
+            bw.write(customerList.get(i).getFirstName());
+            bw.newLine();
+            bw.write(customerList.get(i).getLastName());
+            bw.newLine();
+            bw.write(Double.toString(roundDouble(customerList.get(i).getPrevTotal())));
+            bw.newLine();
+            bw.write(customerList.get(i).getPrevDate());
+            bw.newLine();
+        }
+        bw.flush();
+        bw.close();
+    }
+
     public static void printCatalog(String customerName, ArrayList<Product> catalog){
         //This function handles printing out and formatting the initial catalog
         System.out.println("Hello " + customerName);
@@ -220,6 +249,8 @@ public class MarketCMDLine {
         System.out.printf("\n%129s%10.2f", "Pay in Full Discount: ",(-1*payFullDiscount));
         System.out.printf("\n%129s%10.2f", "Tax: ", tax);
         System.out.printf("\n\n%129s%10.2f","Total: ", total);
+
+
     }
 
     public static void saveReceiptToFile(String customerName, ArrayList<Product> productCatalog, double subTotal, double payFullDiscount, double tax, double total) throws IOException {

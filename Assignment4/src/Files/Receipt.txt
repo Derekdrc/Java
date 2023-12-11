@@ -1,14 +1,14 @@
 Derek DArcy
 12/10/2023
 Code              Name              Description               Amount Purchased  Price Per Item                 Discounts         Price            
-1001              Eggs             1 Dozen Grade A Large          15                2.99                          -4.49            40.37            
-1002              Pancakes         12 Oz Pancake Batter Mix       10                5.99                          -5.99            53.91            
+1001              Eggs             1 Dozen Grade A Large          10                2.99                          -2.99            26.91            
+1002              Pancakes         12 Oz Pancake Batter Mix       15                5.99                          -8.99            80.87            
 1003              Bacon            1 Lb Smoked Bacon              12                4.99                          -5.99            53.89            
 1004              Milk             1 Gallon 2% Milk               1                 2.39                          0.0              2.39             
 1005              Charger          USB C Cord and Plug            2                 12.99                         0.0              25.98            
 
 
-Subtotal: $176.54
-Pay in Full Discount: -$8.83
-Tax: $10.06
-Total: $177.77
+Subtotal: $190.04
+Pay in Full Discount: -$9.5
+Tax: $10.83
+Total: $191.37
