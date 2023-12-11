@@ -2,6 +2,7 @@
 Derek D'Arcy
 11/30/23
 Assignment 4 - GUI Market
+"I pledge that on all academic work that I submit, I will neither give nor receive unauthorized aid, nor will I present another person's work as my own."
  */
 
 import javax.swing.*;
